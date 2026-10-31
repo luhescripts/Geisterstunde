@@ -1,0 +1,770 @@
+{
+  "title": "Geisterstunde",
+  "duel": [
+    {
+      "prompt": "In welchem Jahr wurde Stephen King geboren?",
+      "answer": 1947, "min": 1900, "max": 2000, "step": 1, "start": 1950,
+      "display": "1947",
+      "info": "Stephen King wurde am 21. September 1947 in Portland, Maine, geboren."
+    },
+    {
+      "prompt": "Wie viele Filme umfasst die „Halloween“-Reihe vom Original (1978) bis „Halloween Ends“ (2022)?",
+      "answer": 13, "unit": "Filme", "min": 1, "max": 40, "step": 1, "start": 8,
+      "info": "13 Filme – inklusive „Halloween III“ ohne Michael Myers und der beiden Rob-Zombie-Filme."
+    },
+    {
+      "prompt": "Wie viele Oscars gewann „Das Schweigen der Lämmer“?",
+      "answer": 5, "unit": "Oscars", "min": 0, "max": 15, "step": 1, "start": 3,
+      "info": "Fünf – die „Big Five“: Film, Regie, Hauptdarsteller, Hauptdarstellerin und Drehbuch."
+    },
+    {
+      "prompt": "Wie alt wurde Horror-Legende Vincent Price?",
+      "answer": 82, "unit": "Jahre", "min": 30, "max": 110, "step": 1, "start": 60,
+      "info": "Vincent Price lebte von 1911 bis 1993 und wurde 82 Jahre alt."
+    },
+    {
+      "prompt": "In welchem Jahr erschien Edgar Allan Poes Gedicht „Der Rabe“?",
+      "answer": 1845, "min": 1700, "max": 1950, "step": 1, "start": 1800,
+      "display": "1845",
+      "info": "„The Raven“ erschien im Januar 1845 und machte Poe berühmt."
+    },
+    {
+      "prompt": "Wie alt war Jamie Lee Curtis, als sie „Halloween“ (1978) drehte?",
+      "answer": 19, "unit": "Jahre", "min": 10, "max": 50, "step": 1, "start": 25,
+      "info": "Sie war 19 – „Halloween“ war ihre erste Kinorolle."
+    },
+    {
+      "prompt": "Für wie viele Oscars war „Der Exorzist“ nominiert?",
+      "answer": 10, "unit": "Nominierungen", "min": 0, "max": 20, "step": 1, "start": 5,
+      "info": "Zehn Nominierungen, zwei davon gewann der Film: Drehbuch und Ton."
+    },
+    {
+      "prompt": "Wie viele Minuten dauert John Carpenters Original-„Halloween“ von 1978?",
+      "answer": 91, "unit": "Minuten", "min": 40, "max": 200, "step": 1, "start": 120,
+      "info": "Rund 91 Minuten – je nach Fassung werden auch 92 oder 93 angegeben."
+    }
+  ],
+  "pages": [
+    {
+      "title": "Seite 1 · Die Dämmerung",
+      "subtitle": "Noch ist es hell … fast.",
+      "categories": [
+        {
+          "name": "Finde den Killer",
+          "icon": "🔪",
+          "type": "map",
+          "questions": [
+            {
+              "prompt": "Im Herbst 1888 versetzte ein nie gefasster Mörder ein ganzes Stadtviertel in Angst. Wo schlug Jack the Ripper zu?",
+              "lat": 51.5174, "lng": -0.0596, "radiusKm": 30,
+              "label": "Whitechapel, London (England)",
+              "buyHint": "Es liegt in England.",
+              "info": "Die fünf „kanonischen“ Morde geschahen 1888 in und um Whitechapel im Londoner East End. Der Täter wurde nie identifiziert."
+            },
+            {
+              "prompt": "Wo lebte Jeffrey Dahmer, als er 1991 gefasst wurde?",
+              "lat": 43.0418, "lng": -87.9455, "radiusKm": 50,
+              "label": "Milwaukee, Wisconsin (USA)",
+              "buyHint": "Es liegt im Mittleren Westen der USA, an einem der Großen Seen.",
+              "info": "Dahmer wurde im Juli 1991 in seiner Wohnung in Milwaukee festgenommen, nachdem ein Opfer fliehen konnte."
+            },
+            {
+              "prompt": "Ed Gein inspirierte „Psycho“, „Texas Chainsaw Massacre“ und „Das Schweigen der Lämmer“. Wo stand seine Farm?",
+              "lat": 44.185, "lng": -89.583, "radiusKm": 40,
+              "label": "Geins Farm bei Plainfield, Wisconsin (USA)",
+              "buyHint": "Es liegt im US-Bundesstaat Wisconsin.",
+              "info": "Auf Geins Farm bei Plainfield fand die Polizei 1957 grausige Gegenstände aus menschlichen Überresten."
+            },
+            {
+              "prompt": "H. H. Holmes baute ein verwinkeltes Hotel, das die Presse als „Murder Castle“ berüchtigt machte. In welcher Stadt stand es?",
+              "lat": 41.7795, "lng": -87.6404, "radiusKm": 40,
+              "label": "Chicago, Illinois (USA)",
+              "buyHint": "Es liegt in den USA, am Ufer eines der Großen Seen.",
+              "info": "Das Gebäude stand im Stadtteil Englewood, rund 5 km vom Gelände der Weltausstellung 1893 entfernt. Die Geschichten von Geheimgängen und Folterkammern gelten heute als Übertreibung der Presse."
+            },
+            {
+              "prompt": "Die „Blutgräfin“ Elisabeth Báthory soll im Blut junger Frauen gebadet haben. Auf welcher Burg war sie bis zu ihrem Tod eingesperrt?",
+              "lat": 48.7244, "lng": 17.76, "radiusKm": 30,
+              "label": "Burg Čachtice (Slowakei)",
+              "buyHint": "Es liegt in der heutigen Slowakei.",
+              "info": "Báthory wurde 1610 verhaftet und starb 1614 auf ihrer Burg Čachtice (ungarisch Csejte). Das Blutbad gilt als spätere Legende."
+            }
+          ]
+        },
+        {
+          "name": "Emoji-Exorzismus",
+          "icon": "😱",
+          "type": "type",
+          "questions": [
+            {
+              "prompt": "Welcher Horrorfilm ist das?",
+              "emoji": "🤡🎈🌧️",
+              "answers": ["Es", "It", "Stephen Kings Es", "Es Kapitel 1", "It Chapter One"],
+              "info": "Pennywise und der rote Luftballon: Stephen Kings „Es“."
+            },
+            {
+              "prompt": "Welcher Horrorfilm ist das?",
+              "emoji": "🏨❄️🪓",
+              "answers": ["Shining", "The Shining"],
+              "info": "Hotel, Schnee, Axt: Jack Torrance in Stanley Kubricks „Shining“ (1980)."
+            },
+            {
+              "prompt": "Welcher Horrorfilm ist das?",
+              "emoji": "🚿🔪👵",
+              "answers": ["Psycho"],
+              "info": "Die Duschszene und „Mutter“: Hitchcocks „Psycho“ (1960)."
+            },
+            {
+              "prompt": "Welcher Horrorfilm ist das?",
+              "emoji": "🐇✂️👯",
+              "answers": ["Wir", "Us"],
+              "info": "Kaninchen, goldene Scheren und Doppelgänger: Jordan Peeles „Wir“ (Us, 2019)."
+            },
+            {
+              "prompt": "Welcher Horrorfilm ist das?",
+              "emoji": "🌸👑🔥🐻",
+              "answers": ["Midsommar", "Midsommer"],
+              "info": "Blumenkrone, Feuer und ein Bär: Ari Asters „Midsommar“ (2019)."
+            }
+          ]
+        },
+        {
+          "name": "Grusel-Chronik",
+          "icon": "⏳",
+          "type": "sort",
+          "questions": [
+            {
+              "prompt": "Sortiert nach Erscheinungsjahr – der älteste Film nach oben!",
+              "top": "Ältester", "bottom": "Neuester",
+              "items": [
+                { "label": "Dracula (mit Bela Lugosi)", "value": 1931 },
+                { "label": "Halloween (Original)", "value": 1978 },
+                { "label": "Scream (Original)", "value": 1996 },
+                { "label": "Get Out", "value": 2017 }
+              ]
+            },
+            {
+              "prompt": "Sortiert nach Erscheinungsjahr – der älteste Film nach oben!",
+              "top": "Ältester", "bottom": "Neuester",
+              "items": [
+                { "label": "Psycho (Hitchcock)", "value": 1960 },
+                { "label": "Der Exorzist", "value": 1973 },
+                { "label": "A Nightmare on Elm Street (Original)", "value": 1984 },
+                { "label": "Saw", "value": 2004 }
+              ]
+            },
+            {
+              "prompt": "Sortiert nach Erscheinungsjahr – der älteste Film nach oben!",
+              "top": "Ältester", "bottom": "Neuester",
+              "items": [
+                { "label": "Nosferatu (Stummfilm)", "value": 1922 },
+                { "label": "Die Nacht der lebenden Toten (Original)", "value": 1968 },
+                { "label": "Alien", "value": 1979 },
+                { "label": "Blair Witch Project", "value": 1999 },
+                { "label": "Hereditary", "value": 2018 }
+              ]
+            },
+            {
+              "prompt": "Sortiert nach Erscheinungsjahr – der älteste Film nach oben!",
+              "top": "Ältester", "bottom": "Neuester",
+              "items": [
+                { "label": "Das Schweigen der Lämmer", "value": 1991 },
+                { "label": "Scream (Original)", "value": 1996 },
+                { "label": "The Sixth Sense", "value": 1999 },
+                { "label": "28 Days Later", "value": 2002 },
+                { "label": "The Descent", "value": 2005 }
+              ]
+            },
+            {
+              "prompt": "Fünf Klassiker aus fünf aufeinanderfolgenden Jahren. Sortiert sie – der älteste nach oben!",
+              "top": "Ältester", "bottom": "Neuester",
+              "items": [
+                { "label": "Der weiße Hai", "value": 1975 },
+                { "label": "Carrie (Original)", "value": 1976 },
+                { "label": "Suspiria (Original)", "value": 1977 },
+                { "label": "Halloween (Original)", "value": 1978 },
+                { "label": "Alien", "value": 1979 }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Wer bin ich?",
+          "icon": "🔎",
+          "type": "clues",
+          "questions": [
+            {
+              "prompt": "Wer bin ich?",
+              "clues": [
+                "Ich besuche euch am liebsten, wenn ihr schlaft.",
+                "Mein Gesicht ist von Verbrennungen gezeichnet.",
+                "Mein Pullover ist rot-grün gestreift.",
+                "An meiner rechten Hand trage ich Klingen.",
+                "Ich treibe mein Unwesen in der Elm Street."
+              ],
+              "answers": ["Freddy Krueger", "Freddy", "Krueger", "Freddy Kruger", "Freddie Krueger"],
+              "info": "Freddy Krueger aus „A Nightmare on Elm Street“ (1984)."
+            },
+            {
+              "prompt": "Wer bin ich?",
+              "clues": [
+                "Ich wache etwa alle 27 Jahre auf.",
+                "Ich lebe in der Kanalisation einer Kleinstadt in Maine.",
+                "Ich ernähre mich von Angst.",
+                "Ich verschenke gern rote Luftballons.",
+                "Ich bin ein tanzender Clown."
+              ],
+              "answers": ["Pennywise", "Es", "It", "Pennywise der Clown", "Bob Gray", "Robert Gray"],
+              "info": "Pennywise aus Stephen Kings „Es“."
+            },
+            {
+              "prompt": "Wer bin ich?",
+              "clues": [
+                "Als Mensch war ich der gefürchtete „Lakeshore Strangler“.",
+                "Ein Voodoo-Ritual hat meine Seele gerettet.",
+                "Ich bin ziemlich klein – und ziemlich wütend.",
+                "Ich trage eine Latzhose und habe rote Haare.",
+                "Ich bin eine „Good Guy“-Puppe."
+              ],
+              "answers": ["Chucky", "Chucky die Mörderpuppe", "Charles Lee Ray"],
+              "info": "Chucky aus „Chucky – Die Mörderpuppe“ (Child's Play, 1988)."
+            },
+            {
+              "prompt": "Wer bin ich?",
+              "clues": [
+                "Meine langen schwarzen Haare hängen mir ins Gesicht.",
+                "Ich war lange in einem Brunnen eingesperrt.",
+                "Ich habe eine Vorliebe für Videokassetten.",
+                "Nach dem Anruf bleiben dir noch sieben Tage.",
+                "Ich krieche aus dem Fernseher."
+              ],
+              "answers": ["Samara", "Samara Morgan", "Sadako", "Sadako Yamamura"],
+              "info": "Samara aus „Ring“ (2002) – im japanischen Original „Ringu“ heißt sie Sadako."
+            },
+            {
+              "prompt": "Wer bin ich?",
+              "clues": [
+                "Ich gehöre zu den Zenobiten.",
+                "Für die einen bin ich ein Engel, für die anderen ein Dämon.",
+                "Man ruft mich mit einem mechanischen Rätselwürfel.",
+                "Erfunden hat mich der Autor Clive Barker.",
+                "In meinem Kopf steckt ein Raster aus Nägeln."
+              ],
+              "answers": ["Pinhead", "Hell Priest", "Höllenpriester"],
+              "info": "Pinhead aus „Hellraiser“ (1987)."
+            }
+          ]
+        },
+        {
+          "name": "Montagsmaler",
+          "icon": "🎨",
+          "type": "draw",
+          "questions": [
+            { "word": "Kürbis", "answers": ["Kürbisse", "Halloweenkürbis", "Kürbislaterne", "Kürbiskopf", "Jack O Lantern", "Pumpkin"] },
+            { "word": "Fledermaus", "answers": ["Fledermäuse", "Bat", "Vampirfledermaus"] },
+            { "word": "Sarg", "answers": ["Särge", "Coffin", "Totenkiste"] },
+            { "word": "Werwolf", "answers": ["Werwölfe", "Werewolf", "Wolfsmensch", "Wolfmensch"] },
+            { "word": "Exorzismus", "answers": ["Exorzist", "Exorcism", "Exorcist", "Teufelsaustreibung", "Dämonenaustreibung", "Austreibung"] }
+          ]
+        },
+        {
+          "name": "Fluch & Schwäche",
+          "icon": "🧄",
+          "type": "match",
+          "questions": [
+            {
+              "prompt": "Was hilft gegen wen? Verbindet Monster und Schwachstelle!",
+              "pairs": [
+                { "left": "Vampir", "right": "Holzpflock ins Herz" },
+                { "left": "Werwolf", "right": "Silberkugel" },
+                { "left": "Zombie", "right": "Kopfschuss" },
+                { "left": "Böse Hexe des Westens (Der Zauberer von Oz)", "right": "Ein Eimer Wasser" }
+              ]
+            },
+            {
+              "prompt": "Welcher Killer, welche Waffe?",
+              "pairs": [
+                { "left": "Freddy Krueger", "right": "Klingenhandschuh" },
+                { "left": "Leatherface", "right": "Kettensäge" },
+                { "left": "Ghostface", "right": "Jagdmesser" },
+                { "left": "Candyman", "right": "Haken" },
+                { "left": "Jason Voorhees", "right": "Machete" }
+              ]
+            },
+            {
+              "prompt": "Welcher Film spielt wo?",
+              "pairs": [
+                { "left": "Shining", "right": "Overlook Hotel" },
+                { "left": "Freitag der 13.", "right": "Camp Crystal Lake" },
+                { "left": "Halloween", "right": "Haddonfield" },
+                { "left": "Es", "right": "Derry" },
+                { "left": "A Nightmare on Elm Street", "right": "Springwood" }
+              ]
+            },
+            {
+              "prompt": "Wer spukt in welchem Film?",
+              "pairs": [
+                { "left": "Pinhead", "right": "Hellraiser" },
+                { "left": "Pazuzu", "right": "Der Exorzist" },
+                { "left": "Annabelle", "right": "Conjuring – Die Heimsuchung" },
+                { "left": "Art der Clown", "right": "Terrifier" },
+                { "left": "Samara", "right": "Ring" },
+                { "left": "Michael Myers", "right": "Halloween" }
+              ]
+            },
+            {
+              "prompt": "Wer führte bei welchem Film Regie?",
+              "pairs": [
+                { "left": "John Carpenter", "right": "Das Ding aus einer anderen Welt (1982)" },
+                { "left": "Wes Craven", "right": "Scream" },
+                { "left": "Tobe Hooper", "right": "Blutgericht in Texas" },
+                { "left": "Ari Aster", "right": "Hereditary" },
+                { "left": "Sam Raimi", "right": "Tanz der Teufel" },
+                { "left": "William Friedkin", "right": "Der Exorzist" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Zerstückelt",
+          "icon": "🧩",
+          "type": "puzzle",
+          "questions": [
+            {
+              "scene": "halloween", "grid": 3,
+              "bonus": { "question": "Auf welchen Horrorfilm spielt das Bild an?", "answers": ["Halloween", "Halloween Die Nacht des Grauens", "Halloween 1978"] },
+              "info": "Michael Myers kehrt in „Halloween“ (1978) in seine Heimatstadt Haddonfield zurück."
+            },
+            {
+              "scene": "es", "grid": 3,
+              "bonus": { "question": "Auf welchen Horrorfilm spielt das Bild an?", "answers": ["Es", "It", "Stephen Kings Es", "Es Kapitel 1", "It Chapter One", "Es 2017"] },
+              "info": "Georgies Papierboot, der Gully und ein roter Ballon – „Es“."
+            },
+            {
+              "scene": "freitag", "grid": 4,
+              "bonus": { "question": "Auf welchen Horrorfilm spielt das Bild an?", "answers": ["Freitag der 13.", "Freitag der 13", "Friday the 13th", "Freitag der Dreizehnte", "Und wieder ist Freitag der 13.", "Freitag der 13. Teil 3", "Friday the 13th Part 3"] },
+              "info": "Jasons Eishockeymaske (ab Teil 3) und Camp Crystal Lake – die „Freitag der 13.“-Reihe."
+            },
+            {
+              "scene": "ring", "grid": 4,
+              "bonus": { "question": "Auf welchen Horrorfilm spielt das Bild an?", "answers": ["Ring", "The Ring", "Ringu", "Ring Das Original"] },
+              "info": "Das verfluchte Video mit dem Brunnen – „Ring“."
+            },
+            {
+              "scene": "saw", "grid": 5,
+              "bonus": { "question": "Auf welchen Horrorfilm spielt das Bild an?", "answers": ["Saw", "Jigsaw"] },
+              "info": "Das verdreckte Badezimmer mit Ketten und Sägen plus Billy auf seinem Dreirad – zwei Ikonen aus „Saw“ (2004)."
+            }
+          ]
+        },
+        {
+          "name": "Wer stirbt zuerst?",
+          "icon": "💀",
+          "type": "choice",
+          "questions": [
+            {
+              "prompt": "„Psycho“ (1960): Wer stirbt in diesem Film als Erstes?",
+              "options": ["Marion Crane", "Detektiv Arbogast", "Lila Crane", "Sam Loomis"],
+              "correct": 0,
+              "info": "Marion Crane stirbt schon nach gut 45 Minuten in der berühmten Duschszene – ein Schock für das Publikum 1960."
+            },
+            {
+              "prompt": "„Alien“ (1979): Wer aus der Crew der Nostromo stirbt zuerst?",
+              "options": ["Brett", "Kane", "Dallas", "Lambert"],
+              "correct": 1,
+              "info": "Kane erwischt es als Ersten – beim legendären Chestburster am Esstisch."
+            },
+            {
+              "prompt": "„Scream“ (1996): Wer stirbt im Film als Allererstes?",
+              "options": ["Casey Becker", "Tatum Riley", "Steve Orth", "Direktor Himbry"],
+              "correct": 2,
+              "info": "Fieser Trick: Caseys Freund Steve stirbt kurz vor ihr – Casey hängt noch am Telefon, als Ghostface ihn auf der Terrasse tötet."
+            },
+            {
+              "prompt": "„Final Destination“ (2000): Wer von den Überlebenden des Flugzeugs stirbt zuerst?",
+              "options": ["Terry Chaney", "Valerie Lewton", "Billy Hitchcock", "Tod Waggner"],
+              "correct": 3,
+              "info": "Tod stirbt als Erster – im Badezimmer, durch eine Kette fieser Zufälle."
+            },
+            {
+              "prompt": "„The Cabin in the Woods“: Wer von den fünf Freunden stirbt zuerst?",
+              "options": ["Jules", "Curt", "Holden", "Marty"],
+              "correct": 0,
+              "info": "Jules erwischt es als Erste – die Zombie-Familie Buckner schlägt im Wald zu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Seite 2 · Die Geisterstunde",
+      "subtitle": "Jetzt wird es richtig dunkel.",
+      "categories": [
+        {
+          "name": "Drehort-Jagd",
+          "icon": "🌍",
+          "type": "map",
+          "questions": [
+            {
+              "prompt": "Wo steht die steile Treppe, die durch „Der Exorzist“ (1973) berühmt wurde?",
+              "lat": 38.9055, "lng": -77.0702, "radiusKm": 30,
+              "label": "Georgetown, Washington D.C. (USA)",
+              "buyHint": "Es liegt an der Ostküste der USA.",
+              "info": "Die „Exorcist Steps“ in Georgetown sind heute eine Touristenattraktion – samt Gedenktafel."
+            },
+            {
+              "prompt": "Wo steht das echte Haus aus „Amityville Horror“?",
+              "lat": 40.6662, "lng": -73.4141, "radiusKm": 30,
+              "label": "Amityville, Long Island, New York (USA)",
+              "buyHint": "Es liegt im US-Bundesstaat New York.",
+              "info": "1974 wurde dort eine Familie getötet. Die späteren Spukberichte der neuen Besitzer machten das Haus weltberühmt."
+            },
+            {
+              "prompt": "Welches Hotel zeigt Kubricks „Shining“ von außen als Overlook Hotel?",
+              "lat": 45.3311, "lng": -121.7113, "radiusKm": 40,
+              "label": "Timberline Lodge, Mount Hood, Oregon (USA)",
+              "buyHint": "Es liegt im Nordwesten der USA, an einem Vulkan.",
+              "info": "Gedreht wurde fast komplett in den Elstree Studios bei London – nur einige Außenaufnahmen zeigen die echte Timberline Lodge."
+            },
+            {
+              "prompt": "Welche echte Geisterstadt, unter der seit 1962 ein Kohleflöz brennt, inspirierte den Film „Silent Hill“?",
+              "lat": 40.8043, "lng": -76.3405, "radiusKm": 40,
+              "label": "Centralia, Pennsylvania (USA)",
+              "buyHint": "Es liegt im US-Bundesstaat Pennsylvania.",
+              "info": "Unter Centralia brennt seit 1962 ein Kohlefeuer. Fast alle Bewohner sind weggezogen."
+            },
+            {
+              "prompt": "Welche Burg diente 1922 in „Nosferatu“ als Schloss von Graf Orlok?",
+              "lat": 49.2615, "lng": 19.359, "radiusKm": 40,
+              "label": "Arwaburg (Orava-Burg), Slowakei",
+              "buyHint": "Es liegt in der Slowakei, nahe der Grenze zu Polen.",
+              "info": "Die Orava-Burg thront auf einem Felsen über dem gleichnamigen Fluss – perfekt für einen Vampir."
+            }
+          ]
+        },
+        {
+          "name": "Schätz-Gruft",
+          "icon": "⚰️",
+          "type": "estimate",
+          "questions": [
+            {
+              "prompt": "Wie viele Filme hat die Saw-Reihe bis einschließlich „Saw X“ (2023)?",
+              "answer": 10, "unit": "Filme", "min": 1, "max": 30, "step": 1, "tolerance": 0, "start": 5,
+              "info": "Von „Saw“ (2004) bis „Saw X“ (2023) sind es 10 Filme, inklusive „Jigsaw“ und „Spiral“."
+            },
+            {
+              "prompt": "Wie viele Stufen hat die berühmte Exorzisten-Treppe in Washington?",
+              "answer": 75, "unit": "Stufen", "min": 10, "max": 300, "step": 1, "tolerance": 2, "start": 100,
+              "info": "75 Stufen – im Film stürzt Pater Karras sie hinunter."
+            },
+            {
+              "prompt": "Wie schwer war der Weltrekord-Kürbis von 2023?",
+              "answer": 1247, "unit": "kg", "min": 100, "max": 3000, "step": 1, "tolerance": 25, "start": 800,
+              "info": "Travis Gienger aus Minnesota stellte 2023 mit 1.247 kg den Weltrekord auf. Im Oktober 2026 fiel der Rekord gleich zweimal – jetzt hält ihn Ron Wallace aus Rhode Island mit 1.431,5 kg."
+            },
+            {
+              "prompt": "Wie viele Seiten hatte die Erstausgabe von Stephen Kings Roman „Es“ (1986)?",
+              "answer": 1138, "unit": "Seiten", "min": 100, "max": 3000, "step": 1, "tolerance": 20, "start": 500,
+              "info": "1.138 Seiten – „Es“ gehört zu den längsten Romanen von Stephen King (Erstausgabe bei Viking, 1986)."
+            },
+            {
+              "prompt": "Mit wie viel Geld wurde „Paranormal Activity“ ursprünglich gedreht?",
+              "answer": 15000, "unit": "$", "min": 1000, "max": 50000000, "scale": "log", "tolerance": 1000, "start": 500000,
+              "info": "Rund 15.000 Dollar – Nachdrehs für das Kino kamen erst später dazu. Weltweit spielte der Film fast 200 Millionen Dollar ein."
+            }
+          ]
+        },
+        {
+          "name": "Lügendetektor",
+          "icon": "🤥",
+          "type": "bet",
+          "questions": [
+            {
+              "statement": "Kürbisse sind botanisch gesehen Beeren.",
+              "correct": true,
+              "info": "Wahr: Kürbisse gehören zu den Panzerbeeren – genau wie Gurken und Melonen."
+            },
+            {
+              "statement": "In Mary Shelleys Roman heißt das Monster „Frankenstein“.",
+              "correct": false,
+              "info": "Gelogen: Frankenstein heißt sein Erschaffer Victor. Das Monster selbst hat keinen Namen."
+            },
+            {
+              "statement": "Laut Regisseur William Friedkin bestand das grüne Erbrochene in „Der Exorzist“ vor allem aus Haferbrei.",
+              "correct": true,
+              "info": "Wahr: Alle reden von Erbsensuppe – laut Friedkin war es aber Haferbrei, der wie Erbsensuppe eingefärbt wurde."
+            },
+            {
+              "statement": "Jason Voorhees trägt schon im ersten „Freitag der 13.“ (1980) seine Eishockeymaske.",
+              "correct": false,
+              "info": "Gelogen: Im ersten Teil mordet seine Mutter. Die Maske taucht erst in Teil 3 (1982) auf."
+            },
+            {
+              "statement": "Bram Stoker, der Autor von „Dracula“, war nie in Transsilvanien.",
+              "correct": true,
+              "info": "Wahr: Stoker recherchierte in Bibliotheken – in Rumänien war er nie."
+            }
+          ]
+        },
+        {
+          "name": "Entkomme dem Keller",
+          "icon": "🔐",
+          "type": "code",
+          "questions": [
+            {
+              "prompt": "Die Kellertür hat ein Zahlenschloss. Auf einem Zettel steht:",
+              "lines": ["Stephen Kings verfluchtes Hotelzimmer, Film mit John Cusack – die Zimmernummer ist der Code."],
+              "code": "1408", "time": 90,
+              "hint": "Der deutsche Filmtitel lautet „Zimmer ____“ (2007).",
+              "info": "„Zimmer 1408“ (2007) mit John Cusack, nach einer Kurzgeschichte von Stephen King."
+            },
+            {
+              "prompt": "Die Kellertür hat ein Zahlenschloss. Auf einem Zettel steht:",
+              "lines": ["Der Code ist das Erscheinungsjahr von John Carpenters erstem „Halloween“."],
+              "code": "1978", "time": 90,
+              "hint": "Ende der 70er Jahre …",
+              "info": "„Halloween“ kam 1978 in die Kinos."
+            },
+            {
+              "prompt": "Vier Ziffern, vier Fragen. Knackt das Schloss!",
+              "lines": [
+                "Ziffer 1: Wie viele Sanderson-Schwestern gibt es in „Hocus Pocus“?",
+                "Ziffer 2: Wie oft muss man „Candyman“ vor dem Spiegel sagen?",
+                "Ziffer 3: Wie viele Tage bleiben dir nach dem Video in „Ring“?",
+                "Ziffer 4: Wie viele Klingen hat Freddy Kruegers Handschuh im Original von 1984?"
+              ],
+              "code": "3574", "time": 110,
+              "hint": "Die erste Ziffer ist eine 3.",
+              "info": "3 Schwestern · 5 × „Candyman“ · 7 Tage · 4 Klingen"
+            },
+            {
+              "prompt": "Vier Ziffern, drei Fragen. Knackt das Schloss!",
+              "lines": [
+                "Ziffer 1 und 2: Alle wie viele Jahre kehrt Pennywise zurück?",
+                "Ziffer 3: Wie viele Mitglieder hat der „Club der Verlierer“ in „Es“?",
+                "Ziffer 4: Wie viele Ghostbusters gehören am Ende des ersten Films (1984) zum Team?"
+              ],
+              "code": "2774", "time": 110,
+              "hint": "Ziffer 1 und 2 ergeben eine Zahl über 20.",
+              "info": "27 Jahre · 7 Verlierer · 4 Ghostbusters (Venkman, Stantz, Spengler, Zeddemore)"
+            },
+            {
+              "prompt": "Das letzte Schloss. Vier Ziffern – viel Glück!",
+              "lines": [
+                "Ziffer 1: Die letzte Ziffer der Zimmernummer im Film „Shining“.",
+                "Ziffer 2: Wie viele Regeln gelten für einen Mogwai in „Gremlins“?",
+                "Ziffer 3 und 4: Die letzten beiden Ziffern des Erscheinungsjahrs von Hitchcocks „Psycho“."
+              ],
+              "code": "7360", "time": 120,
+              "hint": "Ziffer 2: Licht, Wasser, Essen nach Mitternacht …",
+              "info": "Zimmer 237 · 3 Regeln (kein helles Licht, kein Wasser, nach Mitternacht nichts zu essen) · 1960"
+            }
+          ]
+        },
+        {
+          "name": "Höher oder Tiefer",
+          "icon": "⚡",
+          "type": "hl",
+          "questions": [
+            {
+              "prompt": "Ist der nächste Film neuer (höher) oder älter (tiefer)?",
+              "metric": "Erscheinungsjahr",
+              "items": [
+                { "label": "Psycho (Original)", "value": 1960, "display": "1960" },
+                { "label": "Halloween (Original)", "value": 1978, "display": "1978" },
+                { "label": "Scream (Original)", "value": 1996, "display": "1996" },
+                { "label": "Der Exorzist (Original)", "value": 1973, "display": "1973" },
+                { "label": "Es (Kinofilm)", "value": 2017, "display": "2017" },
+                { "label": "Saw (Original)", "value": 2004, "display": "2004" }
+              ]
+            },
+            {
+              "prompt": "Hat der nächste Film weltweit mehr (höher) oder weniger (tiefer) eingespielt?",
+              "metric": "Einspielergebnis weltweit",
+              "items": [
+                { "label": "Es (2017)", "value": 702, "display": "ca. 702 Mio. $" },
+                { "label": "Saw (2004)", "value": 104, "display": "ca. 104 Mio. $" },
+                { "label": "Der Exorzist (1973)", "value": 441, "display": "ca. 441 Mio. $" },
+                { "label": "Halloween (1978)", "value": 70, "display": "ca. 70 Mio. $" },
+                { "label": "Get Out (2017)", "value": 255, "display": "ca. 255 Mio. $" },
+                { "label": "Paranormal Activity (2007)", "value": 193, "display": "ca. 193 Mio. $" }
+              ]
+            },
+            {
+              "prompt": "Hat der nächste Film weltweit mehr (höher) oder weniger (tiefer) eingespielt?",
+              "metric": "Einspielergebnis weltweit",
+              "items": [
+                { "label": "A Quiet Place (2018)", "value": 341, "display": "ca. 341 Mio. $" },
+                { "label": "Terrifier 3 (2024)", "value": 90, "display": "ca. 90 Mio. $" },
+                { "label": "The Nun (2018)", "value": 366, "display": "ca. 366 Mio. $" },
+                { "label": "M3GAN (2022)", "value": 181, "display": "ca. 181 Mio. $" },
+                { "label": "Five Nights at Freddy's (2023)", "value": 292, "display": "ca. 292 Mio. $" },
+                { "label": "Smile (2022)", "value": 217, "display": "ca. 217 Mio. $" }
+              ]
+            },
+            {
+              "prompt": "Erschien der nächste Roman später (höher) oder früher (tiefer)?",
+              "metric": "Erscheinungsjahr des Romans",
+              "items": [
+                { "label": "Frankenstein", "value": 1818, "display": "1818" },
+                { "label": "Dracula", "value": 1897, "display": "1897" },
+                { "label": "Dr. Jekyll und Mr. Hyde", "value": 1886, "display": "1886" },
+                { "label": "Es", "value": 1986, "display": "1986" },
+                { "label": "Shining", "value": 1977, "display": "1977" },
+                { "label": "Das Schweigen der Lämmer", "value": 1988, "display": "1988" }
+              ]
+            },
+            {
+              "prompt": "Hat die Produktion des nächsten Films mehr (höher) oder weniger (tiefer) gekostet?",
+              "metric": "Produktionsbudget",
+              "items": [
+                { "label": "Die Nacht der lebenden Toten (1968)", "value": 114000, "display": "ca. 114.000 $" },
+                { "label": "Saw (2004)", "value": 1200000, "display": "ca. 1,2 Mio. $" },
+                { "label": "Halloween (1978)", "value": 325000, "display": "ca. 325.000 $" },
+                { "label": "Es (2017)", "value": 35000000, "display": "ca. 35 Mio. $" },
+                { "label": "Get Out (2017)", "value": 4500000, "display": "ca. 4,5 Mio. $" },
+                { "label": "Der Exorzist (1973)", "value": 11500000, "display": "ca. 11–12 Mio. $" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Der Hochstapler",
+          "icon": "👻",
+          "type": "choice",
+          "questions": [
+            {
+              "prompt": "Wer ist KEIN Vampir?",
+              "options": ["Graf Dracula", "Graf Orlok (Nosferatu)", "Lestat", "Frankensteins Monster"],
+              "correct": 3,
+              "info": "Frankensteins Monster ist aus Leichenteilen zusammengesetzt – Blut trinkt es nicht."
+            },
+            {
+              "prompt": "Welche Geschichte stammt NICHT von Stephen King?",
+              "options": ["Shining", "Der Exorzist", "Carrie", "Friedhof der Kuscheltiere"],
+              "correct": 1,
+              "info": "„Der Exorzist“ schrieb William Peter Blatty (1971)."
+            },
+            {
+              "prompt": "Welcher Film ist KEIN Zombiefilm?",
+              "options": ["Shaun of the Dead", "Train to Busan", "The Others", "Die Nacht der lebenden Toten"],
+              "correct": 2,
+              "info": "„The Others“ (2001) mit Nicole Kidman ist ein Geisterfilm."
+            },
+            {
+              "prompt": "Wer hat NOCH NIE einen Horrorfilm gedreht?",
+              "options": ["Ari Aster", "Christopher Nolan", "Jordan Peele", "Robert Eggers"],
+              "correct": 1,
+              "info": "Nolan drehte Thriller wie „Prestige“, aber nie einen Horrorfilm. Eggers drehte u. a. „The Witch“ (2015) und „Nosferatu“ (2024)."
+            },
+            {
+              "prompt": "Wer hat für eine Rolle in einem Horror- oder Psychothriller KEINEN Oscar gewonnen?",
+              "options": ["Anthony Hopkins", "Kathy Bates", "Toni Collette", "Natalie Portman"],
+              "correct": 2,
+              "info": "Toni Collette ging leer aus: Für „The Sixth Sense“ (1999) war sie nominiert, für „Hereditary“ (2018) nicht einmal das – einer der berühmtesten Oscar-Snubs. Hopkins (Das Schweigen der Lämmer), Bates (Misery) und Portman (Black Swan) gewannen."
+            }
+          ]
+        },
+        {
+          "name": "Pixel-Panik",
+          "icon": "🎮",
+          "type": "clues",
+          "questions": [
+            {
+              "prompt": "Welches Spiel bin ich?",
+              "clues": [
+                "Ich erschien 2014 – zuerst nur für den PC.",
+                "Du arbeitest als Nachtwächter.",
+                "Dein Strom ist knapp – schließ die Türen nicht zu oft.",
+                "Nachts wandern Animatronics durch das Gebäude.",
+                "Willkommen in Freddy Fazbear's Pizza!"
+              ],
+              "answers": ["Five Nights at Freddy's", "Five Nights at Freddys", "Five Nights at Freddy", "FNAF", "FNaF 1"],
+              "info": "„Five Nights at Freddy's“ von Scott Cawthon (2014)."
+            },
+            {
+              "prompt": "Welches Spiel bin ich?",
+              "clues": [
+                "Ich erschien 1996 auf der PlayStation.",
+                "Mit mir wurde der Begriff „Survival Horror“ berühmt.",
+                "Alles beginnt in einer Villa in den Arklay-Bergen.",
+                "Hinter allem steckt die Umbrella Corporation.",
+                "Jill, Chris und das T-Virus."
+              ],
+              "answers": ["Resident Evil", "Biohazard", "Resi", "Resident Evil 1"],
+              "info": "„Resident Evil“ (in Japan „Biohazard“) von Capcom, 1996."
+            },
+            {
+              "prompt": "Welches Spiel bin ich?",
+              "clues": [
+                "Ich erschien 1999 auf der PlayStation.",
+                "Mein Nebel versteckte, wie wenig die Konsole darstellen konnte.",
+                "Ein Radio rauscht, wenn Monster in der Nähe sind.",
+                "Harry Mason sucht seine Tochter Cheryl.",
+                "Willkommen in einer Stadt, deren Name „stiller Hügel“ bedeutet."
+              ],
+              "answers": ["Silent Hill", "Silent Hill 1"],
+              "info": "„Silent Hill“ von Konami (1999)."
+            },
+            {
+              "prompt": "Welches Spiel bin ich?",
+              "clues": [
+                "Ich erschien 2010 und stamme aus Schweden.",
+                "Kämpfen kannst du nicht – nur verstecken.",
+                "Schau den Monstern nicht zu lange zu, sonst verlierst du den Verstand.",
+                "Du sammelst Zunderbüchsen und Öl für deine Laterne.",
+                "Daniel erwacht ohne Erinnerung in Schloss Brennenburg."
+              ],
+              "answers": ["Amnesia", "Amnesia The Dark Descent", "Amnesia Dark Descent"],
+              "info": "„Amnesia: The Dark Descent“ von Frictional Games (2010)."
+            },
+            {
+              "prompt": "Welches Spiel bin ich?",
+              "clues": [
+                "Ich war nur eine spielbare Demo von 2014.",
+                "Ich wurde aus dem PlayStation Store entfernt.",
+                "Du gehst immer wieder durch denselben Flur.",
+                "Ein Geist namens Lisa wandert umher.",
+                "Ich war der Teaser zu Hideo Kojimas abgesagtem „Silent Hills“."
+              ],
+              "answers": ["P.T.", "PT", "P T", "Playable Teaser"],
+              "info": "„P.T.“ (Playable Teaser, 2014) – heute eine Legende, weil es nicht mehr erhältlich ist."
+            }
+          ]
+        },
+        {
+          "name": "Internet-Grusel",
+          "icon": "🌐",
+          "type": "type",
+          "questions": [
+            {
+              "prompt": "Wie heißt die riesige, gesichtslose Gestalt im schwarzen Anzug aus einem Internet-Mythos von 2009?",
+              "answers": ["Slender Man", "Slenderman", "Slender"],
+              "info": "Slender Man entstand 2009 in einem Fotobearbeitungs-Wettbewerb im Forum „Something Awful“."
+            },
+            {
+              "prompt": "Wie heißt das endlose Labyrinth aus gelben Räumen mit summenden Neonröhren?",
+              "answers": ["Backrooms", "The Backrooms", "Back Rooms", "Die Backrooms"],
+              "info": "Die Backrooms – genau dort wart ihr im Zwischenspiel!"
+            },
+            {
+              "prompt": "Wie lautet das dreiteilige Motto der fiktiven „SCP Foundation“, das zu ihren Initialen passt?",
+              "answers": ["Secure Contain Protect", "Secure Contain and Protect", "Sichern Bergen Beschützen", "Sichern Eindämmen Schützen", "Sichern Verwahren Schützen"],
+              "info": "Secure. Contain. Protect. – das Motto der Foundation (im deutschen SCP-Wiki: Sichern. Bergen. Beschützen.). Es ist ein nachträgliches Backronym: Ursprünglich stand SCP für „Special Containment Procedures“."
+            },
+            {
+              "prompt": "Wie heißt die Creepypasta-Figur mit weißem Gesicht, eingeschnittenem Lächeln und dem Satz „Go to sleep“?",
+              "answers": ["Jeff the Killer", "Jeff"],
+              "info": "Jeff the Killer ist eine der bekanntesten Creepypastas."
+            },
+            {
+              "prompt": "Auf welcher Website wurde 2019 das allererste Backrooms-Bild gepostet?",
+              "answers": ["4chan", "4 chan", "4chan x", "4chan.org", "fourchan"],
+              "info": "Der Post erschien im Mai 2019 im Board /x/ auf 4chan."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

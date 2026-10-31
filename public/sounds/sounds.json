@@ -1,0 +1,160 @@
+{
+  "click": {
+    "file": "click.ogg",
+    "volume": 1
+  },
+  "hover": {
+    "file": "hover.ogg",
+    "volume": 0.35
+  },
+  "whoosh": {
+    "file": "whoosh.ogg",
+    "volume": 0.5
+  },
+  "lock": {
+    "file": "lock.wav",
+    "volume": 0.55
+  },
+  "correct": {
+    "file": "correct.wav",
+    "volume": 0.45
+  },
+  "wrong": {
+    "file": "wrong.wav",
+    "volume": 0.22
+  },
+  "tick": {
+    "file": "tick.wav",
+    "volume": 0.3
+  },
+  "tickUrgent": {
+    "file": "tick-urgent.wav",
+    "volume": 0.5,
+    "rate": 1.12
+  },
+  "reveal": {
+    "file": "reveal.wav",
+    "volume": 0.4
+  },
+  "pop": {
+    "file": "pop.wav",
+    "volume": 0.35
+  },
+  "type": {
+    "file": "type.wav",
+    "volume": 0.3,
+    "jitter": 0.08
+  },
+  "buzz": {
+    "file": "buzz.wav",
+    "volume": 0.35
+  },
+  "join": {
+    "file": "join.wav",
+    "volume": 0.45,
+    "rate": 0.82,
+    "reverb": 0.4
+  },
+  "pickup": {
+    "file": "pickup.wav",
+    "volume": 0.6
+  },
+  "thunder": {
+    "file": "thunder.wav",
+    "volume": 0.7
+  },
+  "fanfare": {
+    "file": "fanfare.wav",
+    "volume": 0.55
+  },
+  "boom": {
+    "file": "boom.wav",
+    "volume": 0.6
+  },
+  "scream": {
+    "file": "scream.wav",
+    "volume": 0.35,
+    "reverb": 0.5
+  },
+  "jumpscare": {
+    "file": "jumpscare.wav",
+    "volume": 0.9
+  },
+  "lobby": {
+    "file": "amb-lobby.wav",
+    "volume": 0.2,
+    "loop": true
+  },
+  "board": {
+    "file": "amb-board.wav",
+    "volume": 0.22,
+    "loop": true
+  },
+  "tension": {
+    "file": "amb-tension.wav",
+    "volume": 0.18,
+    "loop": true
+  },
+  "backrooms": {
+    "file": "amb-backrooms.wav",
+    "volume": 0.2,
+    "loop": true
+  },
+  "br_hum": {
+    "file": "br-hum.wav",
+    "volume": 0.3,
+    "loop": true
+  },
+  "br_step": {
+    "file": [
+      "br-step-0.ogg",
+      "br-step-1.ogg",
+      "br-step-2.ogg",
+      "br-step-3.ogg",
+      "br-step-4.ogg"
+    ],
+    "volume": 0.5,
+    "jitter": 0.08
+  },
+  "br_growl": {
+    "file": "br-growl.wav",
+    "volume": 0.8
+  },
+  "br_heartbeat": {
+    "file": "br-heartbeat.wav",
+    "volume": 0.8
+  },
+  "br_scream": {
+    "file": "br-scream.wav",
+    "volume": 0.3,
+    "reverb": 0.5
+  },
+  "br_paper": {
+    "file": "br-paper.wav",
+    "volume": 0.7
+  },
+  "br_static": {
+    "file": "br-static.wav",
+    "volume": 0.5,
+    "loop": true
+  },
+  "br_jumpscare": {
+    "file": "br-jumpscare.wav",
+    "volume": 0.9
+  },
+  "br_breath": {
+    "file": "br-breath.wav",
+    "volume": 0.6,
+    "loop": true
+  },
+  "br_whisper": {
+    "file": "br-whisper.wav",
+    "volume": 0.3,
+    "reverb": 0.5
+  },
+  "br_rage": {
+    "file": "br-rage.wav",
+    "volume": 0.7,
+    "reverb": 0.6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "geisterstunde",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Online-Horror-Quizduell mit Team-Battles und Backrooms-Minispiel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "socket.io": "4.8.1"
+  }
+}

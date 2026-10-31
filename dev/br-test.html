@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Backrooms-Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Rubik:wght@400;600;700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/backrooms.css" />
+    <style>
+      :root {
+        --bg: #07060a;
+        --panel: rgba(20, 14, 24, 0.85);
+        --text: #efe6d8;
+        --muted: #9b8f9e;
+        --orange: #ff8c1a;
+        --green: #7cfc5a;
+        --purple: #b26bff;
+        --blood: #d0142c;
+        --font-title: 'Creepster', cursive;
+        --font-body: 'Rubik', system-ui, sans-serif;
+        --font-type: 'Special Elite', monospace;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+      }
+      .bar {
+        height: 56px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px;
+        background: #120d16;
+        border-bottom: 1px solid #2a2030;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+      }
+      .bar input {
+        background: #1d1622;
+        color: var(--text);
+        border: 1px solid #3a2e44;
+        border-radius: 6px;
+        padding: 5px 8px;
+      }
+      .bar button {
+        background: #2a1f33;
+        color: var(--text);
+        border: 1px solid #4a3a58;
+        border-radius: 6px;
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+      #stage {
+        position: relative;
+        width: 100vw;
+        height: calc(100vh - 56px);
+        overflow: hidden;
+      }
+      .lobby {
+        padding: 24px;
+        line-height: 1.6;
+      }
+      .lobby h2 {
+        font-family: var(--font-title);
+        font-size: 36px;
+        margin: 0 0 8px;
+        color: #ffe9a8;
+      }
+      pre {
+        background: #120d16;
+        padding: 12px;
+        border-radius: 8px;
+        white-space: pre-wrap;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <!--SOUND-->
+    <script src="/js/backrooms.js"></script>
+  </head>
+  <body>
+    <div class="bar">
+      <strong>Backrooms-Test</strong>
+      <input id="name" placeholder="Name" size="10" />
+      <button id="join">Beitreten</button>
+      <button id="start">Start</button>
+      <label>Dauer <input id="dur" value="150" size="3" /></label>
+      <label>Countdown <input id="cd" value="5" size="2" /></label>
+      <button id="end">Beenden</button>
+      <button id="tele">Zum Monster</button>
+      <button id="give">+1 Zettel</button>
+      <span id="info"></span>
+    </div>
+    <div id="stage"><div class="lobby" id="lobby"><h2>Backrooms-Test</h2>Name eingeben und beitreten.</div></div>
+    <script>
+      (function () {
+        const qs = new URLSearchParams(location.search);
+        const spectator = qs.has('spectator');
+        const $ = (id) => document.getElementById(id);
+        const stage = $('stage');
+        const socket = io();
+        let you = null;
+        let mounted = false;
+        window.__brSocket = socket;
+
+        function hello() {
+          socket.emit('hello', {
+            spectator,
+            name: $('name').value || qs.get('name') || 'Tester',
+            id: sessionStorage.getItem('br-test-id') || undefined,
+          });
+        }
+        socket.on('connect', () => {
+          if (spectator || qs.get('name') || sessionStorage.getItem('br-test-id')) hello();
+        });
+        $('join').onclick = hello;
+        socket.on('harness:you', (d) => {
+          you = d;
+          if (d.id) sessionStorage.setItem('br-test-id', d.id);
+          $('info').textContent = spectator ? 'Zuschauer' : `${d.name} (${d.id}, ${d.teamId})`;
+        });
+        socket.on('harness:lobby', (d) => {
+          if (mounted) return;
+          const lobbyEl = $('lobby');
+          if (!lobbyEl) return;
+          lobbyEl.innerHTML =
+            '<h2>Backrooms-Test</h2>Verbunden: ' +
+            (d.players.map((p) => p.name + ' [' + p.teamId + ']').join(', ') || '–') +
+            (d.results ? '<pre>' + JSON.stringify(d.results, null, 2) + '</pre>' : '');
+        });
+        socket.on('harness:phase', (d) => {
+          if (d.phase === 'backrooms') mount();
+          else {
+            unmount();
+            stage.innerHTML =
+              '<div class="lobby" id="lobby"><h2>Ergebnis</h2><pre>' + JSON.stringify(d.results, null, 2) + '</pre></div>';
+          }
+        });
+        function mount() {
+          if (mounted) return;
+          stage.innerHTML = '';
+          mounted = true;
+          window.Backrooms.mount(stage, {
+            socket,
+            isHost: spectator,
+            me: you && you.id ? { id: you.id, name: you.name, teamId: you.teamId } : null,
+            teams: [
+              { id: 't1', name: 'Die Untoten', color: '#7cfc5a' },
+              { id: 't2', name: 'Kürbisköpfe', color: '#ff8c1a' },
+            ],
+            sound: window.Sound,
+          });
+        }
+        function unmount() {
+          if (!mounted) return;
+          window.Backrooms.unmount();
+          mounted = false;
+        }
+        const unlock = () => {
+          if (window.Sound && typeof window.Sound.unlock === 'function') window.Sound.unlock();
+        };
+        document.addEventListener('pointerdown', unlock, { capture: true });
+        document.addEventListener('keydown', unlock, { capture: true });
+        $('start').onclick = () => socket.emit('harness:start', { duration: $('dur').value, countdown: $('cd').value });
+        $('end').onclick = () => socket.emit('harness:end');
+        $('tele').onclick = () => socket.emit('harness:teleport');
+        $('give').onclick = () => socket.emit('harness:give');
+      })();
+    </script>
+  </body>
+</html>

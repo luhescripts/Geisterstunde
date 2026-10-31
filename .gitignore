@@ -1,0 +1,7 @@
+# Abhängigkeiten installiert start.bat selbst (npm install)
+node_modules/
+# Laufzeitdaten
+saves/
+tunnel.log
+# Lokale Editor-/Tool-Einstellungen
+.claude/

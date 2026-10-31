@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assets-Test</title>
+<style>
+  body { background: #07060a; color: #efe6d8; font-family: system-ui, sans-serif; margin: 16px; }
+  h1, h2 { font-weight: 600; margin: 18px 0 8px; }
+  button { margin: 3px; padding: 6px 10px; background: #1c1420; color: #efe6d8; border: 1px solid rgba(255,140,26,.35); border-radius: 6px; cursor: pointer; }
+  button.s { border-color: rgba(124,252,90,.6); }
+  .grid { display: flex; flex-wrap: wrap; gap: 12px; }
+  .grid figure { margin: 0; }
+  .grid canvas { width: 300px; height: 300px; display: block; border: 1px solid #333; }
+  figcaption { font-size: 13px; color: #9b8f9e; margin-top: 4px; }
+  .big canvas { width: min(600px, 94vw, 86vh); height: auto; aspect-ratio: 1; }
+  .tiles { display: grid; grid-template-columns: repeat(5, 110px); gap: 4px; }
+  .tiles div { width: 110px; height: 110px; background-size: 550px 550px; border: 1px solid #222; }
+  table { border-collapse: collapse; font-size: 13px; }
+  td, th { padding: 2px 10px; border-bottom: 1px solid #222; text-align: right; }
+  td:first-child, th:first-child { text-align: left; }
+  #status { color: #9b8f9e; font-size: 13px; }
+</style>
+</head>
+<body>
+<div id="sound-ui">
+  <h1>Sounds</h1>
+  <div id="status">Klicke irgendwo, um Audio freizuschalten.</div>
+  <h2>Einzelklänge</h2>
+  <div id="sfx"></div>
+  <h2>Schleifen</h2>
+  <div id="amb"></div>
+  <p><button id="mute">Stumm an/aus</button> <button id="measure">Pegel messen</button></p>
+  <div id="levels"></div>
+</div>
+<h1>Szenen</h1>
+<div class="grid" id="scenes"></div>
+<div id="tilebox"></div>
+
+<script src="../public/js/sound.js"></script>
+<script src="../public/js/scenes.js"></script>
+<script>
+  var SFX = ['click', 'hover', 'lock', 'correct', 'wrong', 'tick', 'tickUrgent', 'reveal', 'thunder', 'whoosh', 'pop', 'drumroll', 'fanfare', 'boom',
+    'scream', 'jumpscare', 'pickup', 'type', 'join', 'buzz',
+    'br_step', 'br_growl', 'br_heartbeat', 'br_scream', 'br_paper', 'br_jumpscare', 'br_whisper'];
+  var AMB = ['lobby', 'board', 'tension', 'backrooms', 'br_hum', 'br_static', 'br_breath'];
+  var q = new URLSearchParams(location.search);
+
+  function unlock() { Sound.unlock(); }
+  document.addEventListener('pointerdown', unlock);
+  document.addEventListener('keydown', unlock);
+
+  function btn(parent, label, fn) {
+    var b = document.createElement('button');
+    b.textContent = label;
+    b.dataset.name = label;
+    b.onclick = fn;
+    parent.appendChild(b);
+    return b;
+  }
+  var sfxBox = document.getElementById('sfx'), ambBox = document.getElementById('amb');
+  SFX.forEach(function (n) { btn(sfxBox, n, function () { Sound.unlock(); Sound.play(n); }); });
+  AMB.forEach(function (n) { btn(ambBox, n, function () { Sound.unlock(); Sound.ambient(n); }); });
+  btn(ambBox, 'aus', function () { Sound.ambient(null); });
+  document.getElementById('mute').onclick = function () { Sound.toggleMute(); status(); };
+
+  function status() {
+    var loaded = Sound.samples ? Sound.samples() : [];
+    document.querySelectorAll('button[data-name]').forEach(function (b) { b.classList.toggle('s', loaded.indexOf(b.dataset.name) >= 0); });
+    document.getElementById('status').textContent = (Sound.ctx ? 'AudioContext: ' + Sound.ctx.state : 'noch gesperrt') +
+      ' · Samples geladen: ' + loaded.length + ' · stumm: ' + Sound.muted;
+  }
+  setInterval(status, 1000);
+
+  document.getElementById('measure').onclick = function () {
+    Sound.unlock();
+    Sound.ready.then(function () {
+      var names = SFX.concat(AMB);
+      return Promise.all(names.map(function (n) {
+        var sec = AMB.indexOf(n) >= 0 ? 5 : n === 'thunder' || n === 'fanfare' ? 8 : 3;
+        return Promise.all([Sound._measure(n, sec), Sound._measure(n, sec, true)]);
+      }));
+    }).then(function (rows) {
+      var db = function (v) { return v > 0 ? (20 * Math.log10(v)).toFixed(1) : '–'; };
+      var h = '<table><tr><th>Name</th><th>Sample</th><th>Spitze dB</th><th>RMS dB</th><th>Synth Spitze</th><th>Synth RMS</th></tr>';
+      rows.forEach(function (r) {
+        h += '<tr><td>' + r[0].name + '</td><td>' + (r[0].sample ? 'ja' : 'nein') + '</td><td>' + db(r[0].peak) + '</td><td>' + db(r[0].rms) +
+          '</td><td>' + db(r[1].peak) + '</td><td>' + db(r[1].rms) + '</td></tr>';
+      });
+      document.getElementById('levels').innerHTML = h + '</table>';
+    });
+  };
+
+  // ---- Szenen
+  var box = document.getElementById('scenes');
+  var only = q.get('scene');
+  if (only || q.get('tiles')) document.getElementById('sound-ui').style.display = 'none';
+  (only ? [only] : q.get('tiles') ? [] : Scenes.names).forEach(function (n) {
+    var fig = document.createElement('figure');
+    if (only) fig.className = 'big';
+    var c = document.createElement('canvas');
+    c.width = c.height = 600;
+    var t0 = performance.now();
+    Scenes.draw(n, c);
+    var cap = document.createElement('figcaption');
+    cap.textContent = n + ' (' + Math.round(performance.now() - t0) + ' ms)';
+    fig.appendChild(c);
+    fig.appendChild(cap);
+    box.appendChild(fig);
+  });
+  var tn = q.get('tiles');
+  if (tn) {
+    var url = Scenes.dataURL(tn, 550);
+    var grid = document.createElement('div');
+    grid.className = 'tiles';
+    var order = [];
+    for (var i = 0; i < 25; i++) order.push(i);
+    var seed = 7;
+    order.sort(function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280 - 0.5; });
+    order.forEach(function (k) {
+      var d = document.createElement('div');
+      d.style.backgroundImage = 'url(' + url + ')';
+      d.style.backgroundPosition = -(k % 5) * 110 + 'px ' + -Math.floor(k / 5) * 110 + 'px';
+      grid.appendChild(d);
+    });
+    document.getElementById('tilebox').appendChild(grid);
+  }
+</script>
+</body>
+</html>
